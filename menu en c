@@ -1,0 +1,51 @@
+#include<stdio.h>
+#include<conio.h>
+#include<iostream>
+#include<stdlib.h>
+#include<math.h>
+
+
+int main()
+{
+	int item;
+	int menu(void);
+	int cargadatos(int);
+	item = menu();
+	printf("la opcion es: %i",item);
+	cargadatos(item);
+}
+
+
+int menu(void)
+{
+	int valor;
+	do{
+		printf("Menu de opciones:\n\n");
+		printf("- 0 - Ingreso de datos\n");
+		printf("- 1 - Cantidad de pasajes vendidos a cada destino\n"); 
+		printf("- 2 - Ticket de mayor valor\n"); 
+		printf("- 3 - Recaudación por destino\n");
+		printf("- 4 - Porcentaje que representa lo recaudado por destino sobre el total\n");
+		printf("- 5 - Cantidad de pasajes vendidos por clase\n");
+		printf("- 6 - Salta fue el destino más solicitado?\n");
+		printf("- 7 - Si debe pagar el 21 porciento de IVA, cual es el monto a pagar\n");
+		printf("- 8 - Imprimir ordenado descendentemente por recaudación por destino\n");
+		printf("\nIngrese la opcion :");
+		scanf("%i",&valor);
+		if ((valor>8) || (valor<0))
+		{
+			printf("\nValor incorrecto\n");
+			system("pause");
+			system("cls");
+		}
+	}while ((valor>8) || (valor<0));
+	return valor;	
+}
+int cargadatos(int item)
+{
+	switch (item){
+		case 0: system("cls"); 
+				printf("INGRESO DE DATOS");	
+	}
+	
+}
