@@ -21,7 +21,7 @@ int main()
 	do
 	{
 		item = menu();
-		printf("la opcion es: %i",item);
+		//printf("la opcion es: %i",item);
 		casemenu(item,boletosxdestino,totaldestino,boletosxclase);
 	}while (item != 9);
 	
@@ -68,7 +68,48 @@ int casemenu(int item,int boletosxdestino [5],int totaldestino [5],int boletosxc
 	switch (item)
 	{
 		case 0: system("cls"); 
-		ticketmayor = cargadatos(boletosxdestino,totaldestino,boletosxclase);		
+		ticketmayor = cargadatos(boletosxdestino,totaldestino,boletosxclase);
+		break;
+		case 1: system("cls");
+				printf("CANTIDAD DE PASAJES VENDIDOS POR DESTINO\n\n\n");
+				if (ticketmayor!=0){		
+					for (int i=1;i<5;i++){
+						if (i == 1)
+						{
+							printf("Total boleto para Salta = %d\n",boletosxdestino[i]);
+						}else if (i==2)
+						{
+							printf("Total boleto para Jujuy = %d\n",boletosxdestino[i]);
+						}else if (i==3)
+						{
+							printf("Total boleto para Tucuman = %d\n",boletosxdestino[i]);
+						}else{
+							printf("Total boleto para Formosa = %d\n",boletosxdestino[i]);											
+						}
+					}
+					system("pause");
+					system("cls");
+					break;
+				}else{
+					printf("Debe cargar datos primero !!!\n");
+					system("pause");
+					system("cls");
+					break;
+				}
+		break;
+		case 2: system("cls");
+				printf("TICKET DE MAYOR VALOR\n\n\n");
+				if (ticketmayor!=0){
+					printf("El ticket de mayor valor es el %d\n",ticketmayor);
+					system("pause");
+					system("cls");
+					break;
+				}else{
+					printf("Debe cargar datos primero !!!\n");
+					system("pause");
+					system("cls");
+					break;
+				}
 	}
 	
 }
