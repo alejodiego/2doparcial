@@ -96,11 +96,36 @@ int casemenu(int item,int boletosxdestino [5],int totaldestino [5],int boletosxc
 					system("cls");
 					break;
 				}
-		break;
 		case 2: system("cls");
 				printf("TICKET DE MAYOR VALOR\n\n\n");
 				if (ticketmayor!=0){
 					printf("El ticket de mayor valor es el %d\n",ticketmayor);
+					system("pause");
+					system("cls");
+					break;
+				}else{
+					printf("Debe cargar datos primero !!!\n");
+					system("pause");
+					system("cls");
+					break;
+				}
+		case 3: system("cls");
+				printf("RECAUDACION POR DESTINO\n\n\n");
+				if (ticketmayor!=0){		
+					for (int i=1;i<5;i++){
+						if (i == 1)
+						{
+							printf("Total recaudado para Salta = %d\n",totaldestino[i]);
+						}else if (i==2)
+						{
+							printf("Total recaudado para Jujuy = %d\n",totaldestino[i]);
+						}else if (i==3)
+						{
+							printf("Total recaudado para Tucuman = %d\n",totaldestino[i]);
+						}else{
+							printf("Total recaudado para Formosa = %d\n",totaldestino[i]);											
+						}
+					}
 					system("pause");
 					system("cls");
 					break;
